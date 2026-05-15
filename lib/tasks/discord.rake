@@ -1,10 +1,10 @@
-require 'discordrb'
+require "discordrb"
 
 namespace :discord_bot do
-  desc 'Fetch messages from Discord'
+  desc "Fetch messages from Discord"
   task fetch_messages: :environment do
-    bot = Discordrb::Bot.new token: ENV['DISCORD_BOT_TOKEN']
-    channel = bot.channel(ENV['CHANNEL_ID'])
+    bot = Discordrb::Bot.new token: ENV["DISCORD_BOT_TOKEN"]
+    channel = bot.channel(ENV["CHANNEL_ID"])
     def fetch_new_messages(channel)
       last_message_id = DiscordMessage.maximum(:discord_message_id)
       messages = channel.history(10, nil, last_message_id)

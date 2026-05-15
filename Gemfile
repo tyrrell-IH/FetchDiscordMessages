@@ -54,7 +54,7 @@ end
 group :development do
   # Use console on exceptions pages [https://github.com/rails/web-console]
   gem "web-console"
-  gem 'discordrb'
+  gem "discordrb"
   gem "html2slim", github: "slim-template/html2slim"
 end
 
@@ -65,6 +65,7 @@ group :test do
 end
 
 gem "dotenv-rails"
-gem 'slim-rails'
-gem 'bootstrap'
-gem 'cssbundling-rails'
+gem "slim-rails"
+gem "bootstrap"
+gem "cssbundling-rails"
+gem "rubocop", require: false

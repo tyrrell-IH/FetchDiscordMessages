@@ -1,2 +1,16 @@
 h1 Discordの投稿一覧
 
+.mb-3
+  table.table.table-hover
+    thead.thead-default
+      tr
+        th= DiscordMessage.human_attribute_name(:posted_at)
+        th= DiscordMessage.human_attribute_name(:author)
+        th= DiscordMessage.human_attribute_name(:content)
+    tbody
+      - @discord_messages.each do |message|
+        tr
+          td = message.posted_at
+          td = message.author
+          td = message.content
+

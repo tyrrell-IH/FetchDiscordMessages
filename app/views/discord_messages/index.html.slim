@@ -1,5 +1,19 @@
 h1 Discordの投稿一覧
 
+- if current_user
+  .d-flex.align-items-center.gap-2
+    = image_tag current_user.avatar_url,
+            size: "40x40",
+            class: "rounded-circle"
+
+    span = current_user.name
+
+= button_to '/logout',
+        method: :delete,
+        data: { turbo: false },
+        class: 'btn btn-primary d-inline-flex align-items-center gap-2' do
+  | ログアウト
+
 .mb-3
   table.table.table-hover
     thead.thead-default

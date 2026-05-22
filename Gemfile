@@ -69,3 +69,7 @@ gem "slim-rails"
 gem "bootstrap"
 gem "cssbundling-rails"
 gem "rubocop", require: false
+
+gem "omniauth"
+gem "omniauth-discord"
+gem "omniauth-rails_csrf_protection"
